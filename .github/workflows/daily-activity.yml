@@ -1,0 +1,25 @@
+name: Daily Activity
+
+on:
+  schedule:
+    - cron: '30 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-daily-activity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update daily-activity.md
+        run: |
+          git config user.name "Aajad Verma"
+          git config user.email "guruviper786@gmail.com"
+          echo "Last updated: $(date -u)" > daily-activity.md
+          git add daily-activity.md
+          git commit -m "Update daily activity log" || echo "No changes to commit"
+          git push
