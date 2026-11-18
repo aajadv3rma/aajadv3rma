@@ -37,7 +37,7 @@ I’m focused on practical software engineering and building web products with c
 | Project | Overview | Links |
 |:--|:--|:--|
 | **AV Xiaomi ROMs** | Firmware metadata index viewer with compliance documentation and a live deployment. | [Live site](https://aajadv3rma.github.io/AV-Xiaomi-Roms/) · [Repository](https://github.com/aajadv3rma/AV-Xiaomi-Roms) |
-| **AV Mega Store** | TypeScript-based utility web project. | [Repository](https://github.com/aajadv3rma/AV-Mega-Store-) |
+| **AV Attendance Tracker** | Next.js attendance workspace for students, employees, and self-employed users. | [Repository](https://github.com/aajadv3rma/av-attendance-tracker) |
 | **Personal site** | Personal web presence and experimentation space. | [Repository](https://github.com/aajadv3rma/aajadv3rma.github.io) |
 
 ## 2026 focus
