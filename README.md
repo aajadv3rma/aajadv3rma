@@ -64,9 +64,9 @@ I’m focused on practical software engineering and building web products with c
 | [AV-Xiaomi-Roms](https://github.com/aajadv3rma/AV-Xiaomi-Roms) | A Xiaomi Roms Fetcher website  | `JavaScript` | 1 | 2026-11-16 |
 | [av-attendance-tracker](https://github.com/aajadv3rma/av-attendance-tracker) | Active project | `TypeScript` | 0 | 2026-11-25 |
 
-### Daily Coding Challenge (2026-11-25)
+### Daily Coding Challenge (2026-11-26)
 - **Problem:** [3934. Smallest Unique Subarray](https://leetcode.com/problems/smallest-unique-subarray/) (LeetCode Daily)
 - **Difficulty:** `Hard` · **Topics:** Array, Hash Table, Binary Search, Rolling Hash
 
-_Last synced: 25 Nov 2026, 11:02 AM IST_
+_Last synced: 26 Nov 2026, 03:48 AM IST_
 <!-- LIVE-DEV-DASHBOARD:END -->
