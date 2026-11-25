@@ -54,3 +54,19 @@ I’m focused on practical software engineering and building web products with c
 </p>
 
 <p align="center"><sub>I enjoy building useful products—especially student-friendly tools and thoughtful web experiences.</sub></p>
+
+<!-- LIVE-DEV-DASHBOARD:START -->
+## Active Projects Snapshot
+
+| Project | Description | Stack | Stars | Last Push |
+| :--- | :--- | :--- | :---: | :---: |
+| [aajadv3rma.github.io](https://github.com/aajadv3rma/aajadv3rma.github.io) | Active project | `CSS` | 0 | 2026-11-17 |
+| [AV-Xiaomi-Roms](https://github.com/aajadv3rma/AV-Xiaomi-Roms) | A Xiaomi Roms Fetcher website  | `JavaScript` | 1 | 2026-11-16 |
+| [av-attendance-tracker](https://github.com/aajadv3rma/av-attendance-tracker) | Active project | `TypeScript` | 0 | 2026-11-25 |
+
+### Daily Coding Challenge (2026-11-25)
+- **Problem:** [3934. Smallest Unique Subarray](https://leetcode.com/problems/smallest-unique-subarray/) (LeetCode Daily)
+- **Difficulty:** `Hard` · **Topics:** Array, Hash Table, Binary Search, Rolling Hash
+
+_Last synced: 25 Nov 2026, 11:02 AM IST_
+<!-- LIVE-DEV-DASHBOARD:END -->
