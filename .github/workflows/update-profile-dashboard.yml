@@ -1,0 +1,64 @@
+name: Update Profile Dashboard
+
+on:
+  schedule:
+    - cron: '0 3 * * *'
+    - cron: '0 13 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-dashboard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 5
+
+      - name: Decide random morning or evening window
+        id: window
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          TODAY=$(TZ="Asia/Kolkata" date +%Y-%m-%d)
+          LAST_COMMIT_DATE=$(TZ="Asia/Kolkata" git log -1 --format=%cd --date=format-local:%Y-%m-%d)
+          if [ "$LAST_COMMIT_DATE" = "$TODAY" ]; then
+            echo "Already updated today ($TODAY). Skipping."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          HOUR_UTC=$(date -u +%H)
+          if [ "$HOUR_UTC" -lt 10 ] && [ $((RANDOM % 2)) -eq 0 ]; then
+            echo "Deferring today's update to the evening window."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          DELAY=$((RANDOM % 1800))
+          echo "Sleeping ${DELAY}s for natural randomized timing..."
+          sleep "$DELAY"
+          echo "run=true" >> "$GITHUB_OUTPUT"
+
+      - name: Set up Python
+        if: steps.window.outputs.run == 'true'
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Update README with live projects & daily coding challenge
+        if: steps.window.outputs.run == 'true'
+        run: python3 .github/scripts/update_dashboard.py
+
+      - name: Commit and push profile update
+        if: steps.window.outputs.run == 'true'
+        run: |
+          git config user.name "Aajad Verma"
+          git config user.email "guruviper786@gmail.com"
+          COMMIT_MSG=$(cat .commit_msg.txt)
+          rm -f .commit_msg.txt
+          git add README.md
+          git diff --staged --quiet || (git commit -m "$COMMIT_MSG" && git push)
