@@ -64,9 +64,9 @@ I’m focused on practical software engineering and building web products with c
 | [AV-Xiaomi-Roms](https://github.com/aajadv3rma/AV-Xiaomi-Roms) | A Xiaomi Roms Fetcher website  | `JavaScript` | 1 | 2026-11-16 |
 | [av-attendance-tracker](https://github.com/aajadv3rma/av-attendance-tracker) | Active project | `TypeScript` | 0 | 2026-11-25 |
 
-### Daily Coding Challenge (2026-11-27)
-- **Problem:** [3360. Stone Removal Game](https://leetcode.com/problems/stone-removal-game/) (LeetCode Daily)
-- **Difficulty:** `Easy` · **Topics:** Math, Simulation
+### Daily Coding Challenge (2026-11-28)
+- **Problem:** [3946. Maximum Number of Items From Sale I](https://leetcode.com/problems/maximum-number-of-items-from-sale-i/) (LeetCode Daily)
+- **Difficulty:** `Medium` · **Topics:** Array, Dynamic Programming, Greedy
 
-_Last synced: 27 Nov 2026, 03:40 AM IST_
+_Last synced: 28 Nov 2026, 03:21 AM IST_
 <!-- LIVE-DEV-DASHBOARD:END -->
